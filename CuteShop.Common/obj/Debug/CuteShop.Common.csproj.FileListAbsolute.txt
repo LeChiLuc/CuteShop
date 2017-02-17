@@ -1,0 +1,5 @@
+E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Common\bin\Debug\CuteShop.Common.dll
+E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Common\bin\Debug\CuteShop.Common.pdb
+E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Common\obj\Debug\CuteShop.Common.dll
+E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Common\obj\Debug\CuteShop.Common.pdb
+E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Common\obj\Debug\CuteShop.Common.csprojResolveAssemblyReference.cache
