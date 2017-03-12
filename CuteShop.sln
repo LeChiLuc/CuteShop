@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuteShop.Service", "CuteSho
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuteShop.Api", "CuteShop.Api\CuteShop.Api.csproj", "{CDE06996-88F6-43E6-B9A2-AD600148099A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuteShop.Administrator", "Administrator\CuteShop.Administrator.csproj", "{0F04FD48-E755-4330-A21F-3ED675195544}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuteShop.Admin", "CuteShop.Admin\CuteShop.Admin.csproj", "{FE83A74E-B7EC-4656-8445-721791108357}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,10 +53,10 @@ Global
 		{CDE06996-88F6-43E6-B9A2-AD600148099A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDE06996-88F6-43E6-B9A2-AD600148099A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDE06996-88F6-43E6-B9A2-AD600148099A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0F04FD48-E755-4330-A21F-3ED675195544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0F04FD48-E755-4330-A21F-3ED675195544}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0F04FD48-E755-4330-A21F-3ED675195544}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0F04FD48-E755-4330-A21F-3ED675195544}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE83A74E-B7EC-4656-8445-721791108357}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE83A74E-B7EC-4656-8445-721791108357}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE83A74E-B7EC-4656-8445-721791108357}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE83A74E-B7EC-4656-8445-721791108357}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

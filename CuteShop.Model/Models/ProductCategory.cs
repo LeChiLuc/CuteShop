@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CuteShop.Model.Abstract;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 namespace CuteShop.Model.Models
 {
     [Table("ProductCategories")]
-    public class ProductCategory
+    public class ProductCategory:Auditable
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

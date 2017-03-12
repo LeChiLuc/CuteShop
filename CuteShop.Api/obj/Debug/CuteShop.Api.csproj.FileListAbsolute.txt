@@ -81,3 +81,6 @@ E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Api\bin\Microsoft.AspNet.I
 E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Api\bin\Microsoft.Owin.Security.xml
 E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Api\bin\Microsoft.Owin.Security.Cookies.xml
 E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Api\bin\Microsoft.Owin.Security.OAuth.xml
+E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Api\bin\System.Web.Cors.dll
+E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Api\bin\System.Web.Http.Cors.dll
+E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Api\bin\System.Web.Http.Cors.xml
