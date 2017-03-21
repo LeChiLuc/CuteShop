@@ -44,6 +44,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -52,6 +60,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -148,6 +158,8 @@
     <Content Include="app\shared\filter\statusFilter.js" />
     <Content Include="app\shared\modules\cuteshop.common.js" />
     <Content Include="app\shared\services\apiService.js" />
+    <Content Include="app\shared\services\commonService.js" />
+    <Content Include="app\shared\services\notificationService.js" />
     <Content Include="Assets\css\AdminLTE.css" />
     <Content Include="Assets\css\AdminLTE.min.css" />
     <Content Include="Assets\css\skins\skin-black-light.css" />
@@ -386,6 +398,10 @@
     <Content Include="Assets\libs\slimScroll\examples\style.css" />
     <Content Include="Assets\libs\slimScroll\jquery.slimscroll.js" />
     <Content Include="Assets\libs\slimScroll\jquery.slimscroll.min.js" />
+    <Content Include="Assets\libs\toastr\toastr.css" />
+    <Content Include="Assets\libs\toastr\toastr.js" />
+    <Content Include="Assets\libs\toastr\toastr.min.css" />
+    <Content Include="Assets\libs\toastr\toastr.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -543,6 +559,12 @@
     <Content Include="Assets\libs\angular-ui-router\LICENSE" />
     <Content Include="Assets\libs\angular-ui-router\README.md" />
     <Content Include="app\components\product_categories\productCategories.module.js" />
+    <Content Include="Assets\libs\toastr\.bower.json" />
+    <Content Include="Assets\libs\toastr\bower.json" />
+    <Content Include="Assets\libs\toastr\LICENSE" />
+    <Content Include="Assets\libs\toastr\README.md" />
+    <Content Include="Assets\libs\toastr\toastr.js.map" />
+    <Content Include="Assets\libs\toastr\toastr.less" />
     <None Include="Project_Readme.html" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>

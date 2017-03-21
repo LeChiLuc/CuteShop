@@ -5,8 +5,8 @@
     </h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
-        <li><a href="#">Quản lý chuyên mục sản phẩm</a></li>
-        <li class="active">Danh sách chuyên mục</li>
+        <li><a href="#">Danh mục</a></li>
+        <li class="active"><a ui-sref="product_categories">Danh sách danh mục</a></li>
     </ol>
 </section>
 <!-- Main content -->
@@ -24,11 +24,25 @@
             </div>
         </div>
         <div class="box-body">
+           
             <div class="row">
                 <div class="col-md-12">
                     <div class="box">
                         <div class="box-header with-border">
                             <h3 class="box-title">Danh sách chuyên mục</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" ng-model="keyword" placeholder="Từ khóa...">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary" type="button" ng-click="search()">Tìm kiếm</button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <button class="btn btn-success" ui-sref="add_product_category">Thêm mới</button>
+                            </div>
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
@@ -51,10 +65,15 @@
                                         <span ng-class="{'badge bg-red':item.Status==false,'badge bg-green':item.Status==true}">{{item.Status | statusFilter}}</span>
                                     </td>
                                     <td>
-                                        <button class="btn btn-sm btn-primary"><i class="fa fa-pencil"></i></button>
+                                        <button class="btn btn-sm btn-primary" ui-sref="edit_product_category({id:item.ID})"><i class="fa fa-pencil"></i></button>
                                         <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
                                     </td>
                                 </tr>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="5"><span class="pull-right">Trang: {{page+1}} - Tổng số bản ghi: {{totalCount}}</span></td>
+                                    </tr>
+                                </tfoot>
                             </table>
                         </div>
                         <!-- /.box-body -->

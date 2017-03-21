@@ -13,6 +13,7 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
+    <link href="~/Assets/libs/toastr/toastr.css" rel="stylesheet" />
     <link rel="stylesheet" href="/Assets/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
@@ -211,29 +212,25 @@
                     <li class="header">MAIN NAVIGATION</li>
                     <li class="treeview">
                         <a href="javascript:void(0)">
-                            <i class="fa fa-dashboard"></i> <span>Quản lý sản phẩm</span>
+                            <i class="fa fa-dashboard"></i> <span>Sản phẩm</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
                         <ul class="treeview-menu">
                             <li><a ui-sref="products"><i class="fa fa-circle-o"></i> Danh sách sản phẩm</a></li>
-                            <li><a ui-sref="product_add"><i class="fa fa-circle-o"></i> Thêm sản phẩm</a></li>
                         </ul>
                     </li>
                     <li class="treeview">
                         <a href="javascript:void(0)">
                             <i class="fa fa-files-o"></i>
-                            <span>Quản lý chuyên mục sản phẩm</span>
+                            <span>Danh mục</span>
                             <span class="pull-right-container">
-                                
+                                <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a ui-sref="product_categories"><i class="fa fa-circle-o"></i> Danh sách chuyên mục</a></li>
-                            <li><a href="../layout/boxed.html"><i class="fa fa-circle-o"></i> Thê</a></li>
-                            <li><a href="../layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-                            <li><a href="../layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
+                            <li><a ui-sref="product_categories"><i class="fa fa-circle-o"></i> Danh sách danh mục</a></li>
                         </ul>
                     </li>
                     <li>
@@ -581,14 +578,19 @@
     <!-- AngularJs -->
     <script src="~/Assets/libs/angular/angular.js"></script>
     <script src="~/Assets/libs/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="~/Assets/libs/toastr/toastr.js"></script>
     <script src="~/app/shared/modules/cuteshop.common.js"></script>
     <script src="~/app/shared/filter/statusFilter.js"></script>
     <script src="~/app/shared/services/apiService.js"></script>
     <script src="~/app/shared/directives/pagerDirective.js"></script>
+    <script src="~/app/shared/services/notificationService.js"></script>
+    <script src="~/app/shared/services/commonService.js"></script>
     <script src="~/app/components/products/products.module.js"></script>
     <script src="~/app/components/product_categories/productCategories.module.js"></script>
     <script src="~/app/app.js"></script>   
     <script src="~/app/components/product_categories/productCategoryListController.js"></script>
+    <script src="~/app/components/product_categories/productCategoryAddController.js"></script>
+    <script src="~/app/components/product_categories/productCategoryEditController.js"></script>
     <script src="~/app/components/products/productAddController.js"></script>
     <script src="~/app/components/products/productEditController.js"></script>
     <script src="~/app/components/products/productListController.js"></script>
