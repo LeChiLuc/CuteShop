@@ -10,10 +10,10 @@ namespace CuteShop.Api.Models
     {
         public int ID { set; get; }
 
-        [Required]
+        [Required(ErrorMessage = "Yêu cầu nhâp tên danh mục")]
         public string Name { set; get; }
 
-        [Required]
+        [Required(ErrorMessage = "Yêu cầu nhâp tiêu đề SEO")]
         public string Alias { set; get; }
 
         public string Description { set; get; }
@@ -39,7 +39,7 @@ namespace CuteShop.Api.Models
 
         public string MetaDescription { set; get; }
 
-        [Required]
+        [Required(ErrorMessage = "Yêu cầu nhập trạng thái")]
         public bool Status { set; get; }
     }
 }
