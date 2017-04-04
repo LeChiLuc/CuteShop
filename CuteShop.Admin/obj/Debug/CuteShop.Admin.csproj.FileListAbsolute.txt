@@ -42,3 +42,4 @@ E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Admin\bin\EntityFramework.
 E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Admin\bin\EntityFramework.SqlServer.dll
 E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Admin\bin\EntityFramework.xml
 E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Admin\bin\EntityFramework.SqlServer.xml
+E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Admin\bin\CKFinder.dll

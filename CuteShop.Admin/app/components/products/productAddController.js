@@ -1,15 +1,27 @@
 ﻿(function (app) {
     app.controller('productAddController', productAddController);
 
-    productAddController.$inject = ['$scope', 'apiService', 'notificationService', '$state'];
+    productAddController.$inject = ['$scope', 'apiService', 'notificationService', '$state', 'commonService'];
 
-    function productAddController($scope, apiService, notificationService, $state) {
+    function productAddController($scope, apiService, notificationService, $state, commonService) {
         $scope.product = {
             CreatedDate: new Date(),
             Status: true
         }
+        $scope.ckeditorOptions = {
+            language: 'vi',
+            height: '200px',
+            uiColor: '#AADC6E',
+            allowedContent: true,
+            entities: false,
+        }
         $scope.AddProduct = AddProduct;
         $scope.getListProductCategories = getListProductCategories;
+        $scope.GetSeoTitle = GetSeoTitle;
+
+        function GetSeoTitle() {
+            $scope.product.Alias = commonService.getSeoTitle($scope.product.Name);
+        }
 
         function AddProduct() {
             apiService.post('api/product/create', $scope.product,
@@ -27,6 +39,13 @@
             }, function (error) {
                 console.log('Get product category failed');
             })
+        }
+        $scope.ChooseImage = function () {
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (fileUrl) {
+                $scope.product.Image = fileUrl;
+            }
+            finder.popup();
         }
 
         getListProductCategories();
