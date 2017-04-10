@@ -3,9 +3,10 @@
 (function () {
     angular.module('cuteshop.products', ['cuteshop.common']).config(config);
 
-    config.$inject = ['$stateProvider', '$urlRouterProvider'];
+    config.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
 
-    function config($stateProvider, $urlRouterProvider) {
+    function config($stateProvider, $urlRouterProvider, $locationProvider) {
+
         $stateProvider.state('products', {
             url: "/products",
             templateUrl: "/app/components/products/productListView.html",
@@ -19,5 +20,6 @@
             templateUrl: "/app/components/products/productEditView.html",
             controller: "productEditController"
         });
+        $locationProvider.html5Mode(true);
     }
 })();
