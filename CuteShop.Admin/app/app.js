@@ -10,12 +10,13 @@
     config.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
 
     function config($stateProvider, $urlRouterProvider, $locationProvider) {
+
         $stateProvider.state('home', {
-            url: "/admin",
+            url: "/admin.html",
             templateUrl: "/app/components/home/homeView.html",
             controller:"homeController"
         });
-        $urlRouterProvider.otherwise('/admin');
+        $urlRouterProvider.otherwise('/admin.html');
         $locationProvider.html5Mode(true);
     }
 })();

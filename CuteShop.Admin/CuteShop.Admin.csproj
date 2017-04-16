@@ -1591,7 +1591,9 @@
     <Content Include="Global.asax" />
     <Content Include="Libs\CKFinder.dll" />
     <Content Include="Libs\JavaScript.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

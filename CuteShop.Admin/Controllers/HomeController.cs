@@ -12,6 +12,5 @@ namespace CuteShop.Admin.Controllers
         {
             return View();
         }
-
     }
 }

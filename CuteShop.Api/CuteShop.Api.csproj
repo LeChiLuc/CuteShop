@@ -201,10 +201,11 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\PostCategoryController.cs" />
-    <Compile Include="Controllers\ProductCategoryController.cs" />
-    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Api\AccountController.cs" />
+    <Compile Include="Api\PostCategoryController.cs" />
+    <Compile Include="Api\ProductCategoryController.cs" />
+    <Compile Include="Api\ProductController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -222,6 +223,129 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\css\carousel.css" />
+    <Content Include="Assets\css\cloud-zoom.css" />
+    <Content Include="Assets\css\colorbox.css" />
+    <Content Include="Assets\css\mobile.css" />
+    <Content Include="Assets\css\stylesheet.css" />
+    <Content Include="Assets\image\arrows.png" />
+    <Content Include="Assets\image\bg-textture.png" />
+    <Content Include="Assets\image\bg123.png" />
+    <Content Include="Assets\image\bg_cart.png" />
+    <Content Include="Assets\image\bg_footer.png" />
+    <Content Include="Assets\image\bg_footer_up.png" />
+    <Content Include="Assets\image\bg_list.gif" />
+    <Content Include="Assets\image\bg_li_b.png" />
+    <Content Include="Assets\image\bg_li_cate.jpg" />
+    <Content Include="Assets\image\bg_li_cate.png" />
+    <Content Include="Assets\image\bg_li_nav.png" />
+    <Content Include="Assets\image\bg_menu.png" />
+    <Content Include="Assets\image\bg_nav.png" />
+    <Content Include="Assets\image\bg_price.png" />
+    <Content Include="Assets\image\bg_repeat.png" />
+    <Content Include="Assets\image\bg_repeat_mobile.png" />
+    <Content Include="Assets\image\bg_tab.png" />
+    <Content Include="Assets\image\bg_tab2.png" />
+    <Content Include="Assets\image\bg_title.png" />
+    <Content Include="Assets\image\bg_top_cart.png" />
+    <Content Include="Assets\image\bg_tr_cart.png" />
+    <Content Include="Assets\image\bg_tr_cart_tablet.png" />
+    <Content Include="Assets\image\cart.png" />
+    <Content Include="Assets\image\cart_bg.png" />
+    <Content Include="Assets\image\controls.png" />
+    <Content Include="Assets\image\del.png" />
+    <Content Include="Assets\image\ex\about.jpg" />
+    <Content Include="Assets\image\ex\b1.jpg" />
+    <Content Include="Assets\image\ex\b2.jpg" />
+    <Content Include="Assets\image\ex\b3.jpg" />
+    <Content Include="Assets\image\ex\b4.jpg" />
+    <Content Include="Assets\image\ex\b5.jpg" />
+    <Content Include="Assets\image\ex\b6.jpg" />
+    <Content Include="Assets\image\ex\bl1.jpg" />
+    <Content Include="Assets\image\ex\bl2.jpg" />
+    <Content Include="Assets\image\ex\bl3.jpg" />
+    <Content Include="Assets\image\ex\p1-209x179.jpg" />
+    <Content Include="Assets\image\ex\p1-big.jpg" />
+    <Content Include="Assets\image\ex\p1-small.jpg" />
+    <Content Include="Assets\image\ex\p2-209x179.jpg" />
+    <Content Include="Assets\image\ex\p2-big.jpg" />
+    <Content Include="Assets\image\ex\p2-small.jpg" />
+    <Content Include="Assets\image\ex\p3-209x179.jpg" />
+    <Content Include="Assets\image\ex\p3-big.jpg" />
+    <Content Include="Assets\image\ex\p3-small.jpg" />
+    <Content Include="Assets\image\ex\p4-209x179.jpg" />
+    <Content Include="Assets\image\ex\p4-big.jpg" />
+    <Content Include="Assets\image\ex\p4-small.jpg" />
+    <Content Include="Assets\image\ex\p5-209x179.jpg" />
+    <Content Include="Assets\image\ex\p6-209x179.jpg" />
+    <Content Include="Assets\image\ex\pro-1.png" />
+    <Content Include="Assets\image\ex\pro-2.png" />
+    <Content Include="Assets\image\ex\pro-3.png" />
+    <Content Include="Assets\image\ex\pro-4.png" />
+    <Content Include="Assets\image\ex\pro-5.png" />
+    <Content Include="Assets\image\ex\pro-6.jpg" />
+    <Content Include="Assets\image\ex\pro-6.png" />
+    <Content Include="Assets\image\ex\pro-7.png" />
+    <Content Include="Assets\image\ex\s1.jpg" />
+    <Content Include="Assets\image\ex\s2.jpg" />
+    <Content Include="Assets\image\ex\s3.jpg" />
+    <Content Include="Assets\image\face.png" />
+    <Content Include="Assets\image\grid.png" />
+    <Content Include="Assets\image\grid_off.png" />
+    <Content Include="Assets\image\heart.png" />
+    <Content Include="Assets\image\icon_1.png" />
+    <Content Include="Assets\image\icon_11.png" />
+    <Content Include="Assets\image\icon_2.png" />
+    <Content Include="Assets\image\icon_29.png" />
+    <Content Include="Assets\image\icon_3.png" />
+    <Content Include="Assets\image\icon_4.png" />
+    <Content Include="Assets\image\icon_47.png" />
+    <Content Include="Assets\image\icon_5.png" />
+    <Content Include="Assets\image\icon_6.png" />
+    <Content Include="Assets\image\icon_65.png" />
+    <Content Include="Assets\image\icon_67.png" />
+    <Content Include="Assets\image\icon_69.png" />
+    <Content Include="Assets\image\icon_7.png" />
+    <Content Include="Assets\image\icon_71.png" />
+    <Content Include="Assets\image\jquery.selectBox-arrow.gif" />
+    <Content Include="Assets\image\line_s.png" />
+    <Content Include="Assets\image\list.png" />
+    <Content Include="Assets\image\list_off.png" />
+    <Content Include="Assets\image\loading.gif" />
+    <Content Include="Assets\image\loadingAnimation.gif" />
+    <Content Include="Assets\image\logo.png" />
+    <Content Include="Assets\image\mails.png" />
+    <Content Include="Assets\image\next-b-small.png" />
+    <Content Include="Assets\image\next-b.png" />
+    <Content Include="Assets\image\next-b_tablet.png" />
+    <Content Include="Assets\image\prev-b-small.png" />
+    <Content Include="Assets\image\prev-b.png" />
+    <Content Include="Assets\image\prev-b_tablet.png" />
+    <Content Include="Assets\image\print.png" />
+    <Content Include="Assets\image\reload.png" />
+    <Content Include="Assets\image\remove-small.png" />
+    <Content Include="Assets\image\s2.png" />
+    <Content Include="Assets\image\share.png" />
+    <Content Include="Assets\image\share2.png" />
+    <Content Include="Assets\image\small-banner-blue-225x161.png" />
+    <Content Include="Assets\image\small-banner-green-225x161.png" />
+    <Content Include="Assets\image\stars-0.png" />
+    <Content Include="Assets\image\stars-1.png" />
+    <Content Include="Assets\image\stars-2.png" />
+    <Content Include="Assets\image\stars-3.png" />
+    <Content Include="Assets\image\stars-4.png" />
+    <Content Include="Assets\image\stars-5.png" />
+    <Content Include="Assets\image\s_btn.png" />
+    <Content Include="Assets\image\title_prod_list.png" />
+    <Content Include="Assets\image\title_sidebar.png" />
+    <Content Include="Assets\image\twitt.png" />
+    <Content Include="Assets\js\cloud-zoom.1.0.2.js" />
+    <Content Include="Assets\js\cuties.js" />
+    <Content Include="Assets\js\jquery-1.7.1.min.js" />
+    <Content Include="Assets\js\jquery.colorbox-min.js" />
+    <Content Include="Assets\js\jquery.cycle.all.js" />
+    <Content Include="Assets\js\jquery.jcarousel.min.js" />
+    <Content Include="Assets\js\jquery.selectBox.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Global.asax" />
@@ -258,6 +382,24 @@
       <Project>{53839BBE-2648-4301-A1C2-AC3F3E5091C0}</Project>
       <Name>CuteShop.Service</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Footer.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Header.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Menu.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Slide.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

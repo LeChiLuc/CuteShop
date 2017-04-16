@@ -7,8 +7,8 @@ E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Model\bin\Debug\EntityFram
 E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Model\bin\Debug\EntityFramework.SqlServer.xml
 E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Model\obj\Debug\CuteShop.Model.dll
 E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Model\obj\Debug\CuteShop.Model.pdb
-E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Model\obj\Debug\CuteShop.Model.csprojResolveAssemblyReference.cache
 E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Model\bin\Debug\Microsoft.AspNet.Identity.Core.dll
 E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
 E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Model\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Model\obj\Debug\CuteShop.Model.csprojResolveAssemblyReference.cache
