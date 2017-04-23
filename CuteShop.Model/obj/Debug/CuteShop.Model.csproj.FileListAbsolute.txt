@@ -11,4 +11,3 @@ E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Model\bin\Debug\Microsoft.
 E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
 E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Model\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
-E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Model\obj\Debug\CuteShop.Model.csprojResolveAssemblyReference.cache

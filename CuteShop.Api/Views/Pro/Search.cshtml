@@ -1,0 +1,316 @@
+﻿@model CuteShop.Api.Infrastructure.Core.PaginationSet<CuteShop.Api.Models.ProductViewModel>
+@{
+    ViewBag.Title = "Kết quả tìm kiếm cho từ khóa";
+    Layout = "~/Views/Shared/Layout.cshtml";
+    var keyword = (string)ViewBag.Keyword;
+}
+
+<div id="column-left">
+    <div class="box">
+        <div class="box-heading">Categories</div>
+        <div class="box-content">
+            <ul class="box-category">
+                <li>
+                    <a href="category.html" class="active">Clothes For Girls (4)</a>
+                    <ul>
+                        <li><a href="category.html">Retrorsum</a></li>
+                        <li><a href="category.html">Suos</a></li>
+                        <li><a href="category.html">Eam</a></li>
+                        <li><a href="category.html">Famulus</a></li>
+                        <li><a href="category.html">Participat</a></li>
+                        <li><a href="category.html">Indulgentia</a></li>
+                        <li><a href="category.html">Dianae</a></li>
+                        <li><a href="category.html">Scitote</a></li>
+                        <li><a href="category.html">Nunc</a></li>
+                        <li class="last-item"><a href="category.html">Lugens</a></li>
+                    </ul>
+                </li>
+                <li> <a href="category.html">Clothes For Boys (0)</a> </li>
+                <li>
+                    <a href="category.html">Toys (12)</a>
+                </li>
+                <li>
+                    <a href="category.html">Safety (5)</a>
+                </li>
+                <li>
+                    <a href="category.html">Furniture (2)</a>
+                </li>
+                <li> <a href="category.html">Prams (3)</a> </li>
+                <li> <a href="category.html">At Home (2)</a> </li>
+                <li class="last-item"> <a href="category.html">Child Seats (0)</a> </li>
+            </ul>
+        </div>
+    </div>
+    <div class="box">
+        <div>
+            <h1 class="title_module"><span>Featured</span></h1>
+            <div class="box-content">
+                <div class="box-product">
+                    <a class="image" href="product.html" title="View more"> <img src="image/ex/pro-1.png" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">Lorem ipsum dolor sit</a></h3>
+                    <p class="wrap_price"> <span class="price">$589.50</span> </p>
+                    <p class="submit">
+                        <input type="button" value="Add to Cart" class="button">
+                    </p>
+                </div>
+                <div class="box-product">
+                    <a class="image" href="product.html" title="View more"> <img src="image/ex/pro-2.png" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">Lorem ipsum dolor sit</a></h3>
+                    <p class="wrap_price"> <span class="price">$120.68</span> </p>
+                    <p class="submit">
+                        <input type="button" value="Add to Cart" class="button">
+                    </p>
+                </div>
+                <div class="box-product">
+                    <a class="image" href="product.html" title="View more"> <img src="image/ex/pro-3.png" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">Lorem ipsum dolor sit</a></h3>
+                    <p class="wrap_price"> <span class="price-old">$119.50</span> <span class="price-new">$107.75</span> </p>
+                    <p class="submit">
+                        <input type="button" value="Add to Cart" class="button">
+                    </p>
+                </div>
+                <div class="box-product">
+                    <a class="image" href="product.html" title="View more"> <img src="image/ex/pro-4.png" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">Lorem ipsum dolor sit</a></h3>
+                    <p class="wrap_price"> <span class="price">$236.99</span> </p>
+                    <p class="submit">
+                        <input type="button" value="Add to Cart" class="button">
+                    </p>
+                </div>
+                <div class="box-product last-item">
+                    <a class="image" href="product.html" title="View more"> <img src="image/ex/pro-5.png" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">Lorem ipsum dolor sit</a></h3>
+                    <p class="wrap_price"> <span class="price">$1,177.00</span> </p>
+                    <p class="submit">
+                        <input type="button" value="Add to Cart" class="button">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="box">
+        <div>
+            <h1 class="title_module"><span>Specials</span></h1>
+            <div class="box-content">
+                <div class="box-product">
+                    <a class="image" href="product.html" title="View more"> <img src="image/ex/pro-1.png" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">Lorem ipsum dolor sit</a></h3>
+                    <p class="wrap_price"> <span class="price">$589.50</span> </p>
+                    <p class="submit">
+                        <input type="button" value="Add to Cart" class="button">
+                    </p>
+                </div>
+                <div class="box-product">
+                    <a class="image" href="product.html" title="View more"> <img src="image/ex/pro-2.png" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">Lorem ipsum dolor sit</a></h3>
+                    <p class="wrap_price"> <span class="price">$120.68</span> </p>
+                    <p class="submit">
+                        <input type="button" value="Add to Cart" class="button">
+                    </p>
+                </div>
+                <div class="box-product">
+                    <a class="image" href="product.html" title="View more"> <img src="image/ex/pro-3.png" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">Lorem ipsum dolor sit</a></h3>
+                    <p class="wrap_price"> <span class="price-old">$119.50</span> <span class="price-new">$107.75</span> </p>
+                    <p class="submit">
+                        <input type="button" value="Add to Cart" class="button">
+                    </p>
+                </div>
+                <div class="box-product">
+                    <a class="image" href="product.html" title="View more"> <img src="image/ex/pro-4.png" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">Lorem ipsum dolor sit</a></h3>
+                    <p class="wrap_price"> <span class="price">$236.99</span> </p>
+                    <p class="submit">
+                        <input type="button" value="Add to Cart" class="button">
+                    </p>
+                </div>
+                <div class="box-product last-item">
+                    <a class="image" href="product.html" title="View more"> <img src="image/ex/pro-5.png" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">Lorem ipsum dolor sit</a></h3>
+                    <p class="wrap_price"> <span class="price">$1,177.00</span> </p>
+                    <p class="submit">
+                        <input type="button" value="Add to Cart" class="button">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="box">
+        <div>
+            <h1 class="title_module"><span>Latest</span></h1>
+            <div class="box-content">
+                <div class="box-product">
+                    <a class="image" href="product.html" title="View more"> <img src="image/ex/pro-1.png" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">Lorem ipsum dolor sit</a></h3>
+                    <p class="wrap_price"> <span class="price">$589.50</span> </p>
+                    <p class="submit">
+                        <input type="button" value="Add to Cart" class="button">
+                    </p>
+                </div>
+                <div class="box-product">
+                    <a class="image" href="product.html" title="View more"> <img src="image/ex/pro-2.png" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">Lorem ipsum dolor sit</a></h3>
+                    <p class="wrap_price"> <span class="price">$120.68</span> </p>
+                    <p class="submit">
+                        <input type="button" value="Add to Cart" class="button">
+                    </p>
+                </div>
+                <div class="box-product">
+                    <a class="image" href="product.html" title="View more"> <img src="image/ex/pro-3.png" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">Lorem ipsum dolor sit</a></h3>
+                    <p class="wrap_price"> <span class="price-old">$119.50</span> <span class="price-new">$107.75</span> </p>
+                    <p class="submit">
+                        <input type="button" value="Add to Cart" class="button">
+                    </p>
+                </div>
+                <div class="box-product">
+                    <a class="image" href="product.html" title="View more"> <img src="image/ex/pro-4.png" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">Lorem ipsum dolor sit</a></h3>
+                    <p class="wrap_price"> <span class="price">$236.99</span> </p>
+                    <p class="submit">
+                        <input type="button" value="Add to Cart" class="button">
+                    </p>
+                </div>
+                <div class="box-product last-item">
+                    <a class="image" href="product.html" title="View more"> <img src="image/ex/pro-5.png" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">Lorem ipsum dolor sit</a></h3>
+                    <p class="wrap_price"> <span class="price">$1,177.00</span> </p>
+                    <p class="submit">
+                        <input type="button" value="Add to Cart" class="button">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<div id="content">
+    <div class="breadcrumb"> &nbsp;<a href="index.html">Home&nbsp;</a> » &nbsp;<a href="#">Clothes For Girls&nbsp;</a> </div>
+    <h1><span class="h1-top">Clothes For Girls</span></h1>
+    <div class="category-info">
+        <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ulla. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+    </div>
+    <div class="product-filter">
+        <div class="display">
+            <label>Display:</label>
+            <p><span id="list" class="list_on"></span> <span id="grid" onclick="display('grid');"></span></p>
+        </div>
+        <div class="sort">
+            <label>Sort By:</label>
+            <a href="?page=@Model.Page&sort=A-Z">Name (A - Z)</a>
+            <select class="selectBox">
+                <option value="1" selected="selected">Default</option>
+                <option value="2" href="?page=@Model.Page&sort=A-Z">A-Z@*<a href="?page=@Model.Page&sort=A-Z">Name (A - Z)</a>*@</option>
+                <option value="3"><a href="?page=@Model.Page&sort=Z-A">Name (Z - A)</a></option>
+                <option value="4">Price (Low &gt; High)</option>
+                <option value="5">Price (High &gt; Low)</option>
+                <option value="6">Rating (Highest)</option>
+                <option value="7">Rating (Lowest)</option>
+                <option value="8">Model (A - Z)</option>
+                <option value="9">Model (Z - A)</option>
+            </select>
+        </div>
+        <div class="limit">
+            <label>Show:</label>
+            <select class="selectBox">
+                <option value="1" selected="selected">15</option>
+                <option value="2">25</option>
+                <option value="3">50</option>
+                <option value="4">75</option>
+                <option value="5">100</option>
+            </select>
+        </div>
+    </div>
+    <div class="product-compare"><a href="#" id="compare-total">@Model.TotalCount sản phẩm</a></div>
+    @if (Model.Count > 0)
+    {
+        <div class="product-list">
+            @foreach (var product in Model.Items)
+            {
+                var url = "/" + product.Alias + ".p-" + product.ID + ".html";
+                <div class="box-product">
+                    <span class="new">Sale</span> <a class="image" href="@url" title="View more"> <img src="@product.Image" alt=""> <span class="new2">Sale</span> </a>
+                    <div class="list_grid_right">
+                        <h3 class="name"><a href="@url" title="">@product.Name</a></h3>
+                        <p class="wrap_price">
+
+                            @if (product.PromotionPrice.HasValue)
+                            {
+                                <span class="price-old">@product.Price.ToString("N2")</span>
+                                <span class="price-new">@product.PromotionPrice.Value.ToString("N2")</span>
+                            }
+                            else
+                            {
+                                <span class="price-old" style="text-decoration:none">@product.Price.ToString("N2")</span>
+                            }
+                        </p>
+                        <p class="description">@product.Description</p>
+                        <p class="submit">
+                            <input type="button" value="Add to Cart" class="button">
+                        </p>
+                        <p class="links_add"> <a>Add to Wish List</a> <a>Add to Compare</a> </p>
+                    </div>
+                </div>
+            }
+            @if (Model.TotalPages > 1)
+            {
+                // Create numeric links
+                var startPageIndex = Math.Max(1, Model.Page - Model.MaxPage / 2);
+                var endPageIndex = Math.Min(Model.TotalPages, Model.Page + Model.MaxPage / 2);
+
+                <nav>
+                    <ul class="pagination">
+                        @if (Model.Page > 1)
+                        {
+                            <li>
+                                <a href="?page=1" aria-label="First">
+                                    <i class="fa fa-angle-double-left"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="?page=@(Model.Page-1)" aria-label="Previous">
+                                    <i class="fa fa-angle-double-left"></i>
+                                </a>
+                            </li>
+                        }
+
+                        @for (int i = startPageIndex; i <= endPageIndex; i++)
+                        {
+                            if (Model.Page == i)
+                            {
+                                <li class="active"><a href="?page=@i" title="Trang @i">@i</a></li>
+                            }
+                            else
+                            {
+                                <li><a href="?page=@i" title="Trang @i">@i</a></li>
+                            }
+                        }
+                        @if (Model.Page < Model.TotalPages)
+                        {
+                            <li>
+                                <a href="?page=@(Model.Page+1)" aria-label="Next">
+                                    <i class="fa fa-angle-double-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="?page=@Model.TotalPages" aria-label="Last">
+                                    <i class="fa fa-angle-double-right"></i>
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="text-center">Không có bản ghi nào được tìm thấy.</div>
+    }
+
+    <div class="pagination">
+        <div class="results">Showing 1 to 4 of 4 (1 Pages)</div>
+    </div>
+</div>

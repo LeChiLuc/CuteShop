@@ -17,6 +17,7 @@ namespace CuteShop.Api.Mappings
             Mapper.CreateMap<ProductCategory, ProductCategoryViewModel>();
             Mapper.CreateMap<Product, ProductViewModel>();
             Mapper.CreateMap<ProductTag, ProductTagViewModel>();
+            Mapper.CreateMap<Slide, SlideViewModel>();
         }
     }
 }

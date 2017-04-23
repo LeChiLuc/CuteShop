@@ -13,12 +13,24 @@ namespace CuteShop.Api.Controllers
     public class HomeController : Controller
     {
         IProductCategoryService _productCategoryService;
-        public HomeController(IProductCategoryService productCategoryService)
+        ISlideService _slideService;
+        IProductService _productService;
+
+        public HomeController(IProductCategoryService productCategoryService, ISlideService slideService, IProductService productService)
         {
             _productCategoryService = productCategoryService;
+            _slideService = slideService;
+            _productService = productService;
         }
         public ActionResult Index()
         {
+            var lastestProductModel = _productService.GetLastestProduct(4);
+            var topHotProductModel = _productService.GetSpecialProduct(4);
+            var lastestProductViewModel = Mapper.Map<IEnumerable<Product>, IEnumerable<ProductViewModel>>(lastestProductModel);
+            var topHotProductViewModel = Mapper.Map<IEnumerable<Product>, IEnumerable<ProductViewModel>>(topHotProductModel);
+
+            ViewBag.lastestProductView = lastestProductViewModel;
+            ViewBag.topHotProductView = topHotProductViewModel;
             return View();
         }
         [ChildActionOnly]
@@ -36,7 +48,9 @@ namespace CuteShop.Api.Controllers
         [ChildActionOnly]
         public ActionResult Slide()
         {
-            return PartialView();
+            var model = _slideService.GetSlides();
+            var slideView = Mapper.Map<IEnumerable<Slide>, IEnumerable<SlideViewModel>>(model);
+            return PartialView(slideView);
         }
     }
 }

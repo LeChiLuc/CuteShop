@@ -1,25 +1,28 @@
 ﻿@model IEnumerable<CuteShop.Api.Models.ProductCategoryViewModel>
 <div id="menu">
     <ul>
-        @foreach (var category in Model)
+        @foreach (var category in Model.Where(x => x.ParentID == null && x.Status==true))
         {
+            var url = "/" + category.Alias + ".pc-" + category.ID + ".html";
+            var childCategories = Model.Where(x => x.ParentID == category.ID && x.Status == true);
             <li class="menu_item down">
-                <a href="category.html">@category.Name</a>
+                <a href="@url">@category.Name</a>
                 <div class="sub_menu" style="">
                     <div class="bubble"></div>
-                    <div class="sub_menu_block" style="width:326px">
-                        <ul>
-                            <li><a href="category.html">Retrorsum</a></li>
-                            <li><a href="category.html">Suos</a></li>
-                            <li><a href="category.html">Eam</a></li>
-                            <li><a href="category.html">Famulus</a></li>
-                            <li><a href="category.html">Participat</a></li>
-                            <li><a href="category.html">Indulgentia</a></li>
-                            <li><a href="category.html">Dianae</a></li>
-                            <li><a href="category.html">Scitote</a></li>
-                            <li><a href="category.html">Nunc</a></li>
-                            <li><a href="category.html">Lugens</a></li>
-                        </ul>
+                    <div class="sub_menu_block" style="width:163px">
+                        @if (childCategories.Count() > 0)
+                        {
+                            <ul>
+                                @foreach (var childCategory in childCategories)
+                                {
+                                    var childUrl = "/" + childCategory.Alias + ".pc-" + childCategory.ID + ".html";
+
+                                    <li><a href="@childUrl">@childCategory.Name</a></li>
+                                }
+                               
+                            </ul>
+                        }
+
                         @*<ul>
                                 <li><a href="category.html">Retrorsum</a></li>
                                 <li><a href="category.html">Suos</a></li>

@@ -658,7 +658,7 @@ a.button:hover, input.button:hover, input.hover {
 	float: left;
 	font-style: normal;
 	padding-left: 10px;
-	line-height: 29px;
+	line-height: 8px;
 	position: relative;
 	margin-bottom:0;
 	border-bottom:none;

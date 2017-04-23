@@ -88,10 +88,6 @@
       <Project>{53839bbe-2648-4301-a1c2-ac3f3e5091c0}</Project>
       <Name>CuteShop.Service</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CuteShop.Web\CuteShop.Web.csproj">
-      <Project>{71fac5c5-ce52-4070-827b-f206de82d860}</Project>
-      <Name>CuteShop.Web</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

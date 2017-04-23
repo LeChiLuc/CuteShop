@@ -2,44 +2,39 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/Layout.cshtml";
+
+    var listLastestProduct = (IEnumerable<CuteShop.Api.Models.ProductViewModel>)ViewBag.lastestProductView;
+    var listTopHotProduct = (IEnumerable<CuteShop.Api.Models.ProductViewModel>)ViewBag.topHotProductView;
 }
 
 <div class="box">
     <div>
         <h1 class="title_module"><span>Latest Products</span></h1>
         <div class="box-content">
-            <div class="box-product">
-                <a class="/Assets/image" href="product.html" title="View more"> <img src="/Assets/image/ex/p1-209x179.jpg" alt=""> </a>
-                <h3 class="name"><a href="product.html" title="">Brown jacket for boys and girls</a></h3>
-                <p class="wrap_price"> <span class="price">$236.99</span> </p>
-                <p class="submit">
-                    <input type="button" value="Add to Cart" class="button">
-                </p>
-            </div>
-            <div class="box-product">
-                <a class="/Assets/image" href="product.html" title="View more"> <img src="/Assets/image/ex/p2-209x179.jpg" alt=""> <span class="new">Sale</span> </a>
-                <h3 class="name"><a href="product.html" title="">Funny toy in green, red and blue</a></h3>
-                <p class="wrap_price"> <span class="price-old">$119.50</span> <span class="price-new">$60.75</span> </p>
-                <p class="submit">
-                    <input type="button" value="Add to Cart" class="button">
-                </p>
-            </div>
-            <div class="box-product">
-                <a class="/Assets/image" href="product.html" title="View more"> <img src="/Assets/image/ex/p3-209x179.jpg" alt=""> </a>
-                <h3 class="name"><a href="product.html" title="">Brown shoes for boys</a></h3>
-                <p class="wrap_price"> <span class="price">$119.50</span> </p>
-                <p class="submit">
-                    <input type="button" value="Add to Cart" class="button">
-                </p>
-            </div>
-            <div class="box-product last-item">
-                <a class="/Assets/image" href="product.html" title="View more"> <img src="/Assets/image/ex/p4-209x179.jpg" alt=""> </a>
-                <h3 class="name"><a href="product.html" title="">Locomotive in green, red and blue</a></h3>
-                <p class="wrap_price"> <span class="price">$1,177.00</span> </p>
-                <p class="submit">
-                    <input type="button" value="Add to Cart" class="button">
-                </p>
-            </div>
+            @foreach (var product in listLastestProduct)
+            {
+                var url = "/" + product.Alias + ".p-" + product.ID + ".html";
+                <div class="box-product">
+                    <a class="/Assets/image" href="@url" title="View more"> <img class="img-responsive" src="@product.Image" alt=""> </a>
+                    <h3 class="name"><a href="product.html" title="">@product.Name</a></h3>
+                    <p class="wrap_price"> 
+                        
+                        @if (product.PromotionPrice.HasValue)
+                        {
+                            <span class="price-old">@product.Price.ToString("N2")</span>
+                            <span class="price-new">@product.PromotionPrice.Value.ToString("N2")</span>
+                        }
+                        else
+                        {
+                            <span class="price-old" style="text-decoration:none">@product.Price.ToString("N2")</span>
+                        }
+                    </p>
+                    <p class="submit">
+                        <input type="button" value="Mua hàng" class="button">
+                    </p>
+                </div>
+            }
+
         </div>
     </div>
 </div>
