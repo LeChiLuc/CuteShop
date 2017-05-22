@@ -1,10 +1,12 @@
-﻿using System;
+﻿using CuteShop.Model.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
 namespace CuteShop.Api.Models
 {
+    [Serializable]
     public class ProductViewModel
     {
         public int ID { set; get; }
@@ -54,5 +56,7 @@ namespace CuteShop.Api.Models
         public bool Status { set; get; }
 
         public virtual ProductCategoryViewModel ProductCategory { set; get; }
+
+        public virtual IEnumerable<ProductTagViewModel> ProductTags { set; get; }
     }
 }

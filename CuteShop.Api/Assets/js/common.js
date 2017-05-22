@@ -30,6 +30,25 @@
               .append("<a>" + item.label + "</a>")
               .appendTo(ul);
         };
+        $('#button-cart').off('click').on('click', function (e) {
+            e.preventDefault();
+            var productId = parseInt($(this).data('id'));
+            cart.addItem(productId);
+        });
+        //function OnChangeSort() {
+        //    alert(1);
+        //    $.ajax({
+        //        url: "/Pro/Category",
+        //        dataType: "json",
+        //        data: {
+        //            sort: { "value": $("#selectSort").val() }
+        //        },
+        //        dataType: "html",
+        //        success: function (res) {
+        //            res.data;
+        //        }
+        //    });
+        //}
     }
 }
 common.init();

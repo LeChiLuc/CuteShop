@@ -433,6 +433,7 @@ a.button:hover, input.button:hover, input.hover {
 .buttons .right {
 	float: right;
 	text-align: right;
+    margin-left: 10px;
 }
 .buttons .center {
 	text-align: center;
@@ -870,6 +871,9 @@ a.button:hover, input.button:hover, input.hover {
 	width:auto;
 	height:auto;
 }
+#sub_menu ul li a:hover{
+    color:blue;
+}
 #menu .menu_item .sub_menu .sub_menu_block {
 	background: #fffef7;
 	border-radius: 8px;
@@ -908,8 +912,8 @@ a.button:hover, input.button:hover, input.hover {
 	min-width: 120px;
 }
 #menu > ul > li ul > li > a:hover, #menu > ul > li ul > li:hover {
-	color:#895c00;
-	background:none;
+	color:#fff;
+	background:#f5a200;
 }
 #menu > ul > li > div > ul > li > a {
 	color: #4d4c4b;
@@ -1251,13 +1255,12 @@ table.radio tr.highlight:hover td {
 	text-align: center;
 	padding: 0;
 	font-size: 16px;
-	float: left;
+	float: right;
 	line-height: 29px;
-	height: 31px;
-	width: 109px;
+	height: 65px;
+	width: 108px;
 	border: 1px solid #E8AA2F;
 	border-right: none;
-	border-bottom-left-radius: 10px;
 	background: #f9ca6b;
 	background: -webkit-gradient(linear, left top, left bottom, from(#fdeec3), to(#f9ca6b));
 	background: -webkit-linear-gradient(top, #fdeec3, #f9ca6b);
@@ -1346,11 +1349,10 @@ table.radio tr.highlight:hover td {
 	display:none;
 }
 .box-product .submit input {
-	height: 33px;
+	height: 65px;
 	width: 110px;
 	border-radius: 0;
 	border: 1px solid #e8aa2f;
-	border-bottom-right-radius: 10px;
 	border-right:none;
 	line-height: 31px;
 	font-size: 16px;
@@ -2965,4 +2967,6 @@ a.color:hover {
 	margin-left:10px;
 	margin-bottom: 7px;
 }
-
+.fixwidths{
+    width:78px !important;
+}

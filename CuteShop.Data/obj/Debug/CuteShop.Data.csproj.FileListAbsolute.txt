@@ -23,3 +23,4 @@ E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Data\bin\Debug\Microsoft.A
 E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Data\obj\Debug\CuteShop.Data.Migrations.AspnetIdentity.resources
 E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Data\obj\Debug\CuteShop.Data.Migrations.Changkey.resources
 E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Data\obj\Debug\CuteShop.Data.Migrations.updateProductCategory.resources
+E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Data\obj\Debug\CuteShop.Data.Migrations.AddCustomerId.resources

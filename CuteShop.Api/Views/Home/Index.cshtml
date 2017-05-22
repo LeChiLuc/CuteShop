@@ -1,36 +1,102 @@
-﻿
+﻿@model IEnumerable<CuteShop.Api.Models.SlideViewModel>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/Layout.cshtml";
 
     var listLastestProduct = (IEnumerable<CuteShop.Api.Models.ProductViewModel>)ViewBag.lastestProductView;
     var listTopHotProduct = (IEnumerable<CuteShop.Api.Models.ProductViewModel>)ViewBag.topHotProductView;
+    var listPromotionProduct = (IEnumerable<CuteShop.Api.Models.ProductViewModel>)ViewBag.promotionProductView;
 }
+@section jsFooter{
+<script src="~/Assets/js/controller/shoppingCart.js"></script>
+    }
+<div id="slide-wrapper">
+    <ul id="slider">
+        @foreach (var slide in Model)
+        {
+            <li>
+                <div class="border_on_img"></div>
+                <div class="content_slider">
+                    @Html.Raw(slide.Content)
+                </div>
+                <img src="@slide.Image" alt="@slide.Name">
+            </li>
+        }
+
+    </ul>
+</div>
+<div class="banner">
+    <div><a href="specials.html"><img src="/Assets/image/small-banner-green-225x161.png" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit"></a> </div>
+</div>
+<div class="banner">
+    <div><img src="/Assets/image/small-banner-blue-225x161.png" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit"> </div>
+</div>
 
 <div class="box">
     <div>
-        <h1 class="title_module"><span>Latest Products</span></h1>
+        <h1 class="title_module"><span>Sản phẩm mới nhất</span></h1>
         <div class="box-content">
             @foreach (var product in listLastestProduct)
             {
                 var url = "/" + product.Alias + ".p-" + product.ID + ".html";
                 <div class="box-product">
-                    <a class="/Assets/image" href="@url" title="View more"> <img class="img-responsive" src="@product.Image" alt=""> </a>
-                    <h3 class="name"><a href="product.html" title="">@product.Name</a></h3>
-                    <p class="wrap_price"> 
-                        
+                    <a class="image" href="@url" title="View more">
+                        <img class="img-responsive" src="http://localhost:49923/@product.Image" alt="">
                         @if (product.PromotionPrice.HasValue)
                         {
-                            <span class="price-old">@product.Price.ToString("N2")</span>
-                            <span class="price-new">@product.PromotionPrice.Value.ToString("N2")</span>
+                            <span class="new">Sale</span>
+                        }
+                    </a>
+                    <h3 class="name"><a href="@url" title="">@product.Name</a></h3>
+                    <p class="wrap_price">
+                        @if (product.PromotionPrice.HasValue)
+                        {
+                            <span class="price-old">@product.Price.ToString("N0") VNĐ</span>
+                            <span class="price-new">@product.PromotionPrice.Value.ToString("N0") VNĐ</span>
                         }
                         else
                         {
-                            <span class="price-old" style="text-decoration:none">@product.Price.ToString("N2")</span>
+                            <span class="price-old" style="text-decoration:none; font-size:16px; margin-top:12px">@product.Price.ToString("N0") VNĐ</span>
                         }
                     </p>
                     <p class="submit">
-                        <input type="button" value="Mua hàng" class="button">
+                        <input type="button" data-id="@product.ID" id="button-cart" value="Mua hàng" class="button">
+                    </p>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+<div class="box">
+    <div>
+        <h1 class="title_module"><span>Sản phẩm bán chạy</span></h1>
+        <div class="box-content">
+            @foreach (var product in listTopHotProduct)
+            {
+                var url = "/" + product.Alias + ".p-" + product.ID + ".html";
+                <div class="box-product">
+                    <a class="image" href="@url" title="View more">
+                        <img class="img-responsive" src="http://localhost:49923/@product.Image" alt="">
+                        @if (product.PromotionPrice.HasValue)
+                        {
+                            <span class="new">Sale</span>
+                        }
+                    </a>
+                    <h3 class="name"><a href="@url" title="">@product.Name</a></h3>
+                    <p class="wrap_price">
+                        @if (product.PromotionPrice.HasValue)
+                        {
+                            <span class="price-old">@product.Price.ToString("N0") VNĐ</span>
+                            <span class="price-new">@product.PromotionPrice.Value.ToString("N0") VNĐ</span>
+                        }
+                        else
+                        {
+                            <span class="price-old" style="text-decoration:none; font-size:16px; margin-top:12px">@product.Price.ToString("N0") VNĐ</span>
+                        }
+                    </p>
+                    <p class="submit">
+                        <input type="button" data-id="@product.ID" id="button-cart" value="Mua hàng" class="button">
                     </p>
                 </div>
             }
@@ -39,94 +105,14 @@
     </div>
 </div>
 <div class="clear"></div>
-<div class="box">
-    <div>
-        <h1 class="title_module"><span>Special Products</span></h1>
-        <div class="box-content">
-            <div class="box-product">
-                <a class="/Assets/image" href="product.html" title="View more"> <img src="/Assets/image/ex/p5-209x179.jpg" alt=""> <span class="new">Sale</span> </a>
-                <h3 class="name"><a href="product.html" title="">Locomotive in green, red and blue</a></h3>
-                <p class="wrap_price"> <span class="price-old">$119.50</span> <span class="price-new">$107.75</span> </p>
-                <p class="submit">
-                    <input type="button" value="Add to Cart" class="button">
-                </p>
-            </div>
-            <div class="box-product">
-                <a class="/Assets/image" href="product.html" title="View more"> <img src="/Assets/image/ex/p6-209x179.jpg" alt=""> <span class="new">Sale</span> </a>
-                <h3 class="name"><a href="product.html" title="">Brown shoes for boys</a></h3>
-                <p class="wrap_price"> <span class="price-old">$119.50</span> <span class="price-new">$96.00</span> </p>
-                <p class="submit">
-                    <input type="button" value="Add to Cart" class="button">
-                </p>
-            </div>
-            <div class="box-product">
-                <a class="/Assets/image" href="product.html" title="View more"> <img src="/Assets/image/ex/p1-209x179.jpg" alt=""> <span class="new">Sale</span> </a>
-                <h3 class="name"><a href="product.html" title="">Funny toy in green, red and blue</a></h3>
-                <p class="wrap_price"> <span class="price-old">$119.50</span> <span class="price-new">$60.75</span> </p>
-                <p class="submit">
-                    <input type="button" value="Add to Cart" class="button">
-                </p>
-            </div>
-            <div class="box-product last-item">
-                <a class="/Assets/image" href="product.html" title="View more"> <img src="/Assets/image/ex/p2-209x179.jpg" alt=""> <span class="new">Sale</span> </a>
-                <h3 class="name"><a href="product.html" title="">Brown jacket for boys and girls</a></h3>
-                <p class="wrap_price"> <span class="price-old">$1,177.00</span> <span class="price-new">$707.00</span> </p>
-                <p class="submit">
-                    <input type="button" value="Add to Cart" class="button">
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="clear"></div>
-<div class="box">
-    <div>
-        <h1 class="title_module"><span>Featured Products</span></h1>
-        <div class="box-content">
-            <div class="box-product">
-                <a class="/Assets/image" href="product.html" title="View more"> <img src="/Assets/image/ex/p3-209x179.jpg" alt=""> </a>
-                <h3 class="name"><a href="product.html" title="">Brown jacket for boys and girls</a></h3>
-                <p class="wrap_price"> <span class="price">$589.50</span> </p>
-                <p class="submit">
-                    <input type="button" value="Add to Cart" class="button">
-                </p>
-            </div>
-            <div class="box-product">
-                <a class="/Assets/image" href="product.html" title="View more"> <img src="/Assets/image/ex/p4-209x179.jpg" alt=""> </a>
-                <h3 class="name"><a href="product.html" title="">Funny toy in green, red and blue</a></h3>
-                <p class="wrap_price"> <span class="price">$120.68</span> </p>
-                <p class="submit">
-                    <input type="button" value="Add to Cart" class="button">
-                </p>
-            </div>
-            <div class="box-product">
-                <a class="/Assets/image" href="product.html" title="View more"> <img src="/Assets/image/ex/p5-209x179.jpg" alt=""> <span class="new">Sale</span> </a>
-                <h3 class="name"><a href="product.html" title="">Brown shoes for boys</a></h3>
-                <p class="wrap_price"> <span class="price-old">$119.50</span> <span class="price-new">$107.75</span> </p>
-                <p class="submit">
-                    <input type="button" value="Add to Cart" class="button">
-                </p>
-            </div>
-            <div class="box-product last-item">
-                <a class="/Assets/image" href="product.html" title="View more"> <img src="/Assets/image/ex/p6-209x179.jpg" alt=""> </a>
-                <h3 class="name"><a href="product.html" title="">Locomotive in green, red and blue</a></h3>
-                <p class="wrap_price"> <span class="price">$236.99</span> </p>
-                <p class="submit">
-                    <input type="button" value="Add to Cart" class="button">
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="clear"></div>
 <div id="carousel">
-    <ul class=" jcarousel-skin-tfc">
-        <li><a href="brands.html"><img src="/Assets/image/ex/b1.jpg" alt="" title=""></a></li>
-        <li><a href="brands.html"><img src="/Assets/image/ex/b2.jpg" alt="" title=""></a></li>
-        <li><a href="brands.html"><img src="/Assets/image/ex/b3.jpg" alt="" title=""></a></li>
-        <li><a href="brands.html"><img src="/Assets/image/ex/b4.jpg" alt="" title=""></a></li>
-        <li><a href="brands.html"><img src="/Assets/image/ex/b5.jpg" alt="" title=""></a></li>
-        <li><a href="brands.html"><img src="/Assets/image/ex/b6.jpg" alt="" title=""></a></li>
+    <ul class="jcarousel-skin-tfc">
+        @foreach (var product in listPromotionProduct)
+        {
+            var url = "/" + product.Alias + ".p-" + product.ID + ".html";
+            <li class="fixwidths"><a href="@url"><img class="img-responsive" style="width: 78px;" src="http://localhost:49923/@product.Image" alt="@product.Name" title=""></a></li>
+        }
+
     </ul>
 </div>
 

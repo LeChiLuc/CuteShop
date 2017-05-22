@@ -45,7 +45,7 @@
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Chọn danh mục</label>
                     <div class="col-sm-10">
-                        <select name="category" class="form-control" required ng-model="product.CategoryID" ng-options="option.ID as option.Name for option in productCategories">
+                        <select name="category" class="form-control" required ng-model="product.CategoryID" ng-options="option.ID as option.Name for option in flatFolders">
                             <option value="">--Chọn danh mục--</option>
                         </select>
                         <span ng-show="frmAddProduct.category.$error.required" class="has-error">Phải chọn danh mục</span>

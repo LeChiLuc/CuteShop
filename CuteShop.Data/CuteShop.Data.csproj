@@ -89,6 +89,10 @@
     <Compile Include="Migrations\201703100850547_updateProductCategory.Designer.cs">
       <DependentUpon>201703100850547_updateProductCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705200220063_AddCustomerId.cs" />
+    <Compile Include="Migrations\201705200220063_AddCustomerId.Designer.cs">
+      <DependentUpon>201705200220063_AddCustomerId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ErrorRepository.cs" />
@@ -144,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703100850547_updateProductCategory.resx">
       <DependentUpon>201703100850547_updateProductCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705200220063_AddCustomerId.resx">
+      <DependentUpon>201705200220063_AddCustomerId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

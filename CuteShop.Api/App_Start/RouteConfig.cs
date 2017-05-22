@@ -19,6 +19,24 @@ namespace CuteShop.Api
                 namespaces: new string[] { "CuteShop.Api.Controllers" }
             );
             routes.MapRoute(
+              name: "Cart",
+              url: "gio-hang.html",
+              defaults: new { controller = "ShoppingCart", action = "Index", tagId = UrlParameter.Optional },
+              namespaces: new string[] { "CuteShop.Api.Controllers" }
+          );
+            routes.MapRoute(
+             name: "Checkout",
+             url: "thanh-toan.html",
+             defaults: new { controller = "ShoppingCart", action = "Checkout", tagId = UrlParameter.Optional },
+             namespaces: new string[] { "CuteShop.Api.Controllers" }
+         );
+            routes.MapRoute(
+                name: "TagList",
+                url: "tag/{tagId}.html",
+                defaults: new { controller = "Pro", action = "ListByTag", tagId = UrlParameter.Optional },
+                namespaces: new string[] { "CuteShop.Api.Controllers" }
+            );
+            routes.MapRoute(
                 name: "Product Category",
                 url: "{alias}.pc-{id}.html",
                 defaults: new { controller = "Pro", action = "Category", id = UrlParameter.Optional },
@@ -30,7 +48,6 @@ namespace CuteShop.Api
                 defaults: new { controller = "Pro", action = "Detail", id = UrlParameter.Optional },
                 namespaces: new string[] { "CuteShop.Api.Controllers" }
             );
-
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

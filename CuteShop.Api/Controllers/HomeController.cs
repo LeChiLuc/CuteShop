@@ -22,22 +22,30 @@ namespace CuteShop.Api.Controllers
             _slideService = slideService;
             _productService = productService;
         }
+        [OutputCache(Duration = 3600,Location =System.Web.UI.OutputCacheLocation.Server)]
         public ActionResult Index()
         {
+            var model = _slideService.GetSlides();
+            var slideView = Mapper.Map<IEnumerable<Slide>, IEnumerable<SlideViewModel>>(model);
             var lastestProductModel = _productService.GetLastestProduct(4);
             var topHotProductModel = _productService.GetSpecialProduct(4);
+            var promotionProductModel = _productService.GetPromotionPriceProduct(25);
             var lastestProductViewModel = Mapper.Map<IEnumerable<Product>, IEnumerable<ProductViewModel>>(lastestProductModel);
             var topHotProductViewModel = Mapper.Map<IEnumerable<Product>, IEnumerable<ProductViewModel>>(topHotProductModel);
+            var promotionProductViewModel = Mapper.Map<IEnumerable<Product>, IEnumerable<ProductViewModel>>(promotionProductModel);
 
             ViewBag.lastestProductView = lastestProductViewModel;
             ViewBag.topHotProductView = topHotProductViewModel;
-            return View();
+            ViewBag.promotionProductView = promotionProductViewModel;
+            return View(slideView);
         }
+        [OutputCache(Duration = 3600)]
         [ChildActionOnly]
         public ActionResult Header()
         {
             return PartialView();
         }
+        [OutputCache(Duration =3600)]
         [ChildActionOnly]
         public ActionResult Menu()
         {
@@ -45,6 +53,7 @@ namespace CuteShop.Api.Controllers
             var listProductCategoryViewModel = Mapper.Map<IEnumerable<ProductCategory>, IEnumerable<ProductCategoryViewModel>>(model);
             return PartialView(listProductCategoryViewModel);
         }
+        [OutputCache(Duration = 3600)]
         [ChildActionOnly]
         public ActionResult Slide()
         {

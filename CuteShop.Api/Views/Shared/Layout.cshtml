@@ -26,7 +26,6 @@
         @{ Html.RenderAction("Menu", "Home");}
        
         <div id="content">
-            @{ Html.RenderAction("Slide", "Home");}
             @RenderBody()
         </div>
     </div>
@@ -40,6 +39,12 @@
     <script type="text/JavaScript" src="/Assets/js/cloud-zoom.1.0.2.js"></script>
     <script type="text/JavaScript" src="/Assets/js/cuties.js"></script>
     <script src="~/Assets/libs/jquery-ui/jquery-ui.min.js"></script>
+    <script src="~/Assets/libs/mustache/mustache.js"></script>
+    <script src="~/Assets/libs/numeral/numeral.js"></script>
+    <script src="~/Assets/js/controller/shoppingCart.js"></script>
     <script src="~/Assets/js/common.js"></script>
+
+
+    @RenderSection("jsFooter", required:false)
 </body>
 </html>

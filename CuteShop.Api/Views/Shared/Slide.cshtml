@@ -1,23 +1,2 @@
-﻿@model IEnumerable<CuteShop.Api.Models.SlideViewModel>
+﻿
 
-<div id="slide-wrapper">
-    <ul id="slider">
-        @foreach (var slide in Model)
-        {
-            <li>
-                <div class="border_on_img"></div>
-                <div class="content_slider">
-                    @Html.Raw(slide.Content)
-                </div>
-                <img src="@slide.Image" alt="@slide.Name">
-            </li>
-        }
-       
-    </ul>
-</div>
-<div class="banner">
-    <div><a href="specials.html"><img src="/Assets/image/small-banner-green-225x161.png" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit"></a> </div>
-</div>
-<div class="banner">
-    <div><img src="/Assets/image/small-banner-blue-225x161.png" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit"> </div>
-</div>

@@ -26,11 +26,22 @@ namespace CuteShop.Service
 
         IEnumerable<Product> GetSpecialProduct(int top);
 
+        IEnumerable<Product> GetPromotionPriceProduct(int top);
+
         IEnumerable<Product> GetListProductByCategoryIdPaging(int categoryId, int page, int pageSize,string sort, out int totalRow);
+
+        IEnumerable<Product> GetReatedProducts(int id, int top);
 
         IEnumerable<Product> Search(string keyword, int page, int pageSize, string sort, out int totalRow);
 
         IEnumerable<string> GetListProductByName(string name);
+
+        IEnumerable<Tag> GetListTagByProductId(int id);
+        Tag GetTag(string tagId);
+
+        void IncreaseView(int id);
+
+        IEnumerable<Product> GetListProductByTag(string tagId, int page, int pageSize, out int totalRow);
 
         Product GetById(int id);
 
@@ -188,6 +199,42 @@ namespace CuteShop.Service
             }
             totalRow = query.Count();
             return query.Skip((page - 1) * pageSize).Take(pageSize);
+        }
+
+        public IEnumerable<Product> GetReatedProducts(int id, int top)
+        {
+            var product = _ProductRepository.GetSingleById(id);
+            return _ProductRepository.GetMulti(x => x.Status && x.ID != id && x.CategoryID == product.CategoryID).OrderByDescending(x => x.CreatedDate).Take(top);
+        }
+
+        public IEnumerable<Tag> GetListTagByProductId(int id)
+        {
+            return _productTagRepository.GetMulti(x => x.ProductID == id, new string[] { "Tag" }).Select(x=>x.Tag);
+        }
+
+        public void IncreaseView(int id)
+        {
+            var product = _ProductRepository.GetSingleById(id);
+            if (product.ViewCount.HasValue)
+                product.ViewCount += 1;
+            else
+                product.ViewCount = 1;
+        }
+
+        public IEnumerable<Product> GetListProductByTag(string tagId, int page, int pageSize, out int totalRow)
+        {
+            var model = _ProductRepository.GetListProductByTag(tagId, page, pageSize, out totalRow);
+            return model;
+        }
+
+        public Tag GetTag(string tagId)
+        {
+            return _tagRepository.GetSingleByCondition(x=>x.ID==tagId);
+        }
+
+        public IEnumerable<Product> GetPromotionPriceProduct(int top)
+        {
+            return _ProductRepository.GetMulti(x => x.Status && x.PromotionPrice.HasValue).OrderByDescending(x => x.CreatedDate).Take(top);
         }
     }
 }

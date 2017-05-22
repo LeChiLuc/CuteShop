@@ -1,0 +1,165 @@
+﻿@model CuteShop.Api.Infrastructure.Core.PaginationSet<CuteShop.Api.Models.ProductViewModel>
+@{
+    var tag = (CuteShop.Api.Models.TagViewModel)ViewBag.Tag;
+    var listLastestProduct = (IEnumerable<CuteShop.Api.Models.ProductViewModel>)ViewBag.lastestProductView;
+    var listTopHotProduct = (IEnumerable<CuteShop.Api.Models.ProductViewModel>)ViewBag.topHotProductView;
+    ViewBag.Title = "Kết quả tìm kiếm cho từ khóa";
+    Layout = "~/Views/Shared/Layout.cshtml";
+
+}
+<div id="column-left">
+    <div class="box">
+        <div>
+            <h1 class="title_module" style="padding: 5px 15px;"><span>Sản phẩm hot</span></h1>
+            <div class="box-content">
+                @foreach (var product in listTopHotProduct)
+                {
+                    var url = "/" + product.Alias + ".p-" + product.ID + ".html";
+                    <div class="box-product">
+                        <a class="image" href="@url" title="View more"> <img src="http://localhost:49923/@product.Image" alt="@product.Name"> </a>
+                        <h3 class="name"><a href="@url" title="@product.Name">@product.Name.Substring(0, 25)...</a></h3>
+                        <p class="wrap_price">
+                            @if (product.PromotionPrice.HasValue)
+                            {
+                                <span class="price-old">@product.Price.ToString("N0") VNĐ</span>
+                                <span class="price-new">@product.PromotionPrice.Value.ToString("N0") VNĐ</span>
+                            }
+                            else
+                            {
+                                <span class="price-old" style="text-decoration:none;">@product.Price.ToString("N0") VNĐ</span>
+                            }
+                        </p>
+                        <p class="submit">
+                            <input type="button" value="Thêm vào giỏ" class="button">
+                        </p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="box">
+        <div>
+            <h1 class="title_module" style="padding: 5px 15px;"><span>Sản phẩm bán chạy</span></h1>
+            <div class="box-content">
+                @foreach (var product in listLastestProduct)
+                {
+                    var url = "/" + product.Alias + ".p-" + product.ID + ".html";
+                    <div class="box-product">
+                        <a class="image" href="@url" title="View more"> <img src="http://localhost:49923/@product.Image" alt="@product.Name"> </a>
+                        <h3 class="name"><a href="@url" title="@product.Name">@product.Name.Substring(0, 25)...</a></h3>
+                        <p class="wrap_price">
+                            @if (product.PromotionPrice.HasValue)
+                            {
+                                <span class="price-old">@product.Price.ToString("N0") VNĐ</span>
+                                <span class="price-new">@product.PromotionPrice.Value.ToString("N0") VNĐ</span>
+                            }
+                            else
+                            {
+                                <span class="price-old" style="text-decoration:none;">@product.Price.ToString("N0") VNĐ</span>
+                            }
+                        </p>
+                        <p class="submit">
+                            <input type="button" value="Thêm vào giỏ" class="button">
+                        </p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<div id="content">
+    <div class="breadcrumb"> &nbsp;<a href="index.html">Home&nbsp;</a> » &nbsp;<a href="#">Clothes For Girls&nbsp;</a> </div>
+    
+    <div class="product-compare"><a href="#" id="compare-total">@tag.Name: @Model.TotalCount sản phẩm</a></div>
+    @if (Model.Count > 0)
+    {
+        <div class="product-list">
+            @foreach (var product in Model.Items)
+            {
+                var url = "/" + product.Alias + ".p-" + product.ID + ".html";
+                <div class="box-product">
+                    <span class="new">Sale</span> <a class="image" href="@url" title="View more"> <img src="http://localhost:49923/@product.Image" alt=""> <span class="new2">Sale</span> </a>
+                    <div class="list_grid_right">
+                        <h3 class="name"><a href="@url" title="">@product.Name</a></h3>
+                        <p class="wrap_price">
+
+                            @if (product.PromotionPrice.HasValue)
+                            {
+                                <span class="price-old">@product.Price.ToString("N2")</span>
+                                <span class="price-new">@product.PromotionPrice.Value.ToString("N2")</span>
+                            }
+                            else
+                            {
+                                <span class="price-old" style="text-decoration:none">@product.Price.ToString("N2")</span>
+                            }
+                        </p>
+                        <p class="description">@product.Description</p>
+                        <p class="submit">
+                            <input type="button" value="Add to Cart" class="button">
+                        </p>
+                        <p class="links_add"> <a>Add to Wish List</a> <a>Add to Compare</a> </p>
+                    </div>
+                </div>
+            }
+            @if (Model.TotalPages > 1)
+            {
+                // Create numeric links
+                var startPageIndex = Math.Max(1, Model.Page - Model.MaxPage / 2);
+                var endPageIndex = Math.Min(Model.TotalPages, Model.Page + Model.MaxPage / 2);
+
+                <nav>
+                    <ul class="pagination">
+                        @if (Model.Page > 1)
+                        {
+                            <li>
+                                <a href="?page=1" aria-label="First">
+                                    <i class="fa fa-angle-double-left"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="?page=@(Model.Page-1)" aria-label="Previous">
+                                    <i class="fa fa-angle-double-left"></i>
+                                </a>
+                            </li>
+                        }
+
+                        @for (int i = startPageIndex; i <= endPageIndex; i++)
+                        {
+                            if (Model.Page == i)
+                            {
+                                <li class="active"><a href="?page=@i" title="Trang @i">@i</a></li>
+                            }
+                            else
+                            {
+                                <li><a href="?page=@i" title="Trang @i">@i</a></li>
+                            }
+                        }
+                        @if (Model.Page < Model.TotalPages)
+                        {
+                            <li>
+                                <a href="?page=@(Model.Page+1)" aria-label="Next">
+                                    <i class="fa fa-angle-double-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="?page=@Model.TotalPages" aria-label="Last">
+                                    <i class="fa fa-angle-double-right"></i>
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="text-center">Không có bản ghi nào được tìm thấy.</div>
+    }
+
+    <div class="pagination">
+        <div class="results">Showing 1 to 4 of 4 (1 Pages)</div>
+    </div>
+</div>

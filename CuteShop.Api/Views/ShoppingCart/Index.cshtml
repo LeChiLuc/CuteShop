@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+@section jsFooter{
+<script src="~/Assets/js/controller/shoppingCart.js"></script>
+    }
+<div id="content1">
+    <div class="breadcrumb"> <a href="index.html">Home</a> » <a href="#">Shopping Cart</a> </div>
+    <form action="shoppingcart.html" method="post" enctype="multipart/form-data">
+        <div class="cart-info">
+            <table>
+                <thead>
+                    <tr>                
+                        <td class="image">Hình ảnh</td>
+                        <td class="name">Tên sản phẩm</td> 
+                        <td class="model">Mã sản phẩm</td>
+                        <td class="quantity" style="width:90px">Số lượng</td>
+                        <td class="price">Giá</td>
+                        <td class="price">Thành tiền</td>
+                        <td class="total"></td>
+                    </tr>
+                </thead>
+                <tbody id="cartBody">
+
+                    
+                </tbody>
+            </table>
+            <div class="pull-right">
+                Tổng tiền: <span id="lblTotalOrder"></span>
+            </div>
+            <script id="template" type="x-tmpl-mustache">
+                <tr>
+                    <td class="image"><a href="#"><img src="{{Image}}" class="img-responsive" alt="" title="" width="130" height="130"></a></td>
+                    <td class="name">
+                        <a href="product.html">{{ProductName}}
+                        </a>
+                        <div> </div>
+                    </td>
+                    <td class="model">{{ProductId}}</td>
+                    <td class="quantity"><input type="text" data-price="{{Price}}" class="txtQuantity" data-id="{{ProductId}}" name="quantity[48]" value="{{Quantity}}" size="1" style="width:40px"></td>
+                    <td class="price">{{PriceF}}</td>
+                    <td class="price" id="amount_{{ProductId}}">
+                        {{Amount}}
+                        
+                    </td>
+                    <td>
+                        <div class="reload">
+                            <a href="#" class="btnDeleteItem" data-id="{{ProductId}}"><img src="/Assets/image/del.png" style="margin-bottom: 23px;" alt="Remove" title="Remove"></a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6" class="emptyrow"></td>
+                </tr>
+            </script>
+        </div>
+    </form>
+
+    <div class="buttons" style="overflow:inherit;height:0px;">
+        <div class="right"><a href="checkout.html" class="button" id="btnDeleteAll">Xóa giỏ hàng</a></div>
+        <div class="right"><a href="/thanh-toan.html" class="button" id="btnCheckout">Thanh toán</a></div>
+        <div class="right"><a href="category.html" class="button" id="btnContinue">Tiếp tục mua hàng</a></div>
+    </div>
+</div>
+
+

@@ -46,6 +46,74 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringHelper.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\ao-khoac-cardigan-soc-lon-nho-cho-be-trai-de-thuong_%288%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\ao-khoac-mau-tron-cho-be-trai_%286%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\ao-khoac-phoi-mau-cho-be-trai_%286%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\ao-so-mi-be-trai-ngan-tay-theu-hinh-dai-bang_%283%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\ao-so-mi-cho-be-trai-in-hinh-xe.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\ao-so-mi-cho-be-trai-in-hinh-xe_%281%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\ao-so-mi-cho-be-trai-in-hinh-xe_%285%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\ao-so-mi-cho-be-trai-ke-soc-caro-size-dai_%284%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\ao-so-mi-cho-be-trai-ke-soc-caro_%283%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\ao-so-mi-ke-soc-cho-be-trai-ca-tinh-1-8-tuoi5545_%28Copy%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\ao-so-mi-soc-cho-be-trai-vi_%281%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\ao-thun-cho-be-trai-in-hinh-tron-nhieu-mau_%286%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\ao-thun-cho-be-trai-size-dai-in-hinh-van-truot_%285%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\ao-thun-in-hinh-tet-cho-ba-me_%284%29_guyw-r0.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\ao-thun-nautica-cho-be-trai-size-dai_%287%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\bo-be-trai-in-hinh-toys-in-actions_%287%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\bo-do-he-sat-nach-be-trai-in-hinh-ca_%284%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\dep-nhua-cross-in-noi-mickey.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\do-bo-be-trai-phoi-quan-kaki-in-chu-play_%282%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\do-boi-cho-be-trai-nhieu-hoa-tiet1.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\dong-ho-tay-bang-dien-tu9973_%28Copy%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\quan-boi-be-trai-hinh-gau-pooh.png" />
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\quan-boi-be-trai-hinh-xe-thomas.png" />
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\quan-boi-be-trai-kem-mu-hinh-xe-thomas.png" />
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\quan-boi-cho-be-trai-kem-non3.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\quan-jeans-dui-sury-cho-be-trai-wash-nhe_%283%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\quan-jeans-lung-be-trai-theu-dap-chu-k_%282%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\quan-kaki-cho-be-trai_%2811%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\quan-kaki-dai-tui-hop-cho-be-trai_2958.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\quan-kaki-lat-lai-cho-be-trai_%286%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\imagesimages\set-5-quan-chip-dui-thun-cotton-cho-be-trai_%283%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\ao-khoac-cardigan-soc-lon-nho-cho-be-trai-de-thuong_%288%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\ao-khoac-mau-tron-cho-be-trai_%286%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\ao-khoac-phoi-mau-cho-be-trai_%286%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\ao-so-mi-be-trai-ngan-tay-theu-hinh-dai-bang_%283%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\ao-so-mi-cho-be-trai-in-hinh-xe.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\ao-so-mi-cho-be-trai-in-hinh-xe_%281%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\ao-so-mi-cho-be-trai-in-hinh-xe_%285%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\ao-so-mi-cho-be-trai-ke-soc-caro-size-dai_%284%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\ao-so-mi-cho-be-trai-ke-soc-caro_%283%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\ao-so-mi-ke-soc-cho-be-trai-ca-tinh-1-8-tuoi5545_%28Copy%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\ao-so-mi-soc-cho-be-trai-vi_%281%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\ao-thun-cho-be-trai-in-hinh-tron-nhieu-mau_%286%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\ao-thun-cho-be-trai-size-dai-in-hinh-van-truot_%285%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\ao-thun-in-hinh-tet-cho-ba-me_%284%29_guyw-r0.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\ao-thun-nautica-cho-be-trai-size-dai_%287%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\bo-be-trai-in-hinh-toys-in-actions_%287%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\bo-do-he-sat-nach-be-trai-in-hinh-ca_%284%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\dep-nhua-cross-in-noi-mickey.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\do-bo-be-trai-phoi-quan-kaki-in-chu-play_%282%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\do-boi-cho-be-trai-nhieu-hoa-tiet1.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\dong-ho-tay-bang-dien-tu9973_%28Copy%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\quan-boi-be-trai-hinh-gau-pooh.png" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\quan-boi-be-trai-hinh-xe-thomas.png" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\quan-boi-be-trai-kem-mu-hinh-xe-thomas.png" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\quan-boi-cho-be-trai-kem-non3.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\quan-jeans-dui-sury-cho-be-trai-wash-nhe_%283%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\quan-jeans-lung-be-trai-theu-dap-chu-k_%282%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\quan-kaki-cho-be-trai_%2811%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\quan-kaki-dai-tui-hop-cho-be-trai_2958.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\quan-kaki-lat-lai-cho-be-trai_%286%29.jpg" />
+    <Content Include="CuteShop.Api\UploadedFiles\images_thumbs\Images\set-5-quan-chip-dui-thun-cotton-cho-be-trai_%283%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CuteShop.Api\UploadedFiles\imagesfiles\" />
+    <Folder Include="CuteShop.Api\UploadedFiles\imagesflash\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

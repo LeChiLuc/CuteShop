@@ -11,7 +11,7 @@ namespace CuteShop.Api.Models
 
         public string TagID { set; get; }
 
-        public virtual ProductViewModel Post { set; get; }
+        public virtual ProductViewModel Product { set; get; }
 
         public virtual TagViewModel Tag { set; get; }
     }
