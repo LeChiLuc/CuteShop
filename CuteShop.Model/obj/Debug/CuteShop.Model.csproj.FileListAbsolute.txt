@@ -11,3 +11,16 @@ E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Model\bin\Debug\Microsoft.
 E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
 E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Model\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 E:\_Hoctap\_Project\_MyProjects\Git\CuteShop\CuteShop.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\LeLuc\CuteShop\CuteShop.Model\bin\Debug\CuteShop.Model.dll.config
+D:\LeLuc\CuteShop\CuteShop.Model\bin\Debug\CuteShop.Model.dll
+D:\LeLuc\CuteShop\CuteShop.Model\bin\Debug\CuteShop.Model.pdb
+D:\LeLuc\CuteShop\CuteShop.Model\bin\Debug\EntityFramework.dll
+D:\LeLuc\CuteShop\CuteShop.Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\LeLuc\CuteShop\CuteShop.Model\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\LeLuc\CuteShop\CuteShop.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\LeLuc\CuteShop\CuteShop.Model\bin\Debug\EntityFramework.xml
+D:\LeLuc\CuteShop\CuteShop.Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\LeLuc\CuteShop\CuteShop.Model\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\LeLuc\CuteShop\CuteShop.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\LeLuc\CuteShop\CuteShop.Model\obj\Debug\CuteShop.Model.dll
+D:\LeLuc\CuteShop\CuteShop.Model\obj\Debug\CuteShop.Model.pdb
